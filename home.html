@@ -8,37 +8,139 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="myBody">
     <header>
-        <div>
+        <div class="cajaLogo">
             <img src="./img/logo.png" alt="Logo Proyecto" class="logo">
         </div>
         <div>
-            <form action="search.html" method="get">
-            <input type="text">
-            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <a href="../html/home.html">HOME</a>
+            <a href="../html/favorite.html">FAVORITOS</a>
+            <a href="../html/Genres.html">GÉNEROS</a>
+        </div>
+        <div>
+            <form action="./search-results.html" method="GET">
+                <input type="text" id="navegador" name="search" value="" placeholder="Buscar por título">
+                <button type="submit">
+                 <i class="fas fa-search"></i>
+                </button>
             </form>
         </div>
-        <nav>
-            <a href="index.html">HOME</a>
-            <a href="favoritos.html"></a>
-        </nav>
     </header>
 
     <main>
-        <form action="search.html">
-            <div>
-                <input type="email" placeholder="E-mail">
-                <input type="text">
-            </div>
-        </form>
+        <section>
+            <article>
+                <h2>CANCIONES POPULARES</h2>
+                <div>
+                    <h3>PLAN A</h3>
+                    <img src="./img/planA.jpeg" alt="Plan A - Paulo Londra">
+                    <p>Cancion de Paulo Londra</p>
+                </div>
+                <div>
+                    <h3>MARTE</h3>
+                    <img src="./img/marte-SR-MB.jpeg" alt="Marte - Sofia Reyes y Maria Becerra">
+                    <p>Cancion de Sofia Reyes y Maria Becerra</p>
+                </div>
+                <div>
+                    <h3>DANCE CRIP</h3>
+                    <img src="./img/dance-crip.jpeg" alt="Dance Crip - Trueno">
+                    <p>Cancion de Trueno</p>
+                </div>
+                <div>
+                    <h3>TACONES ROJOS</h3>
+                    <img src="./img/tacRoj.jpeg" alt="Tacones Rojos - Sebastian Yatra">
+                    <p>Cancion de Sebastian Yatra</p>
+                </div>
+                <div>
+                    <h3>‘BZRP MUSIC SESSIONS #48’</h3>
+                    <img src="./img/biza-tpzk.jpeg" alt=" BZRP MUSIC SESSIONS #48 - Bizarrap">
+                    <p>Cancion de Bizarrap y Tiago PZK</p>
+                </div>
+            </article>
+
+            <article>
+                <h2>ALBUMES POPULARES</h2>
+                <div>
+                    <h3>DANGEROUS</h3>
+                    <img src="./img/dangerous.jpeg" alt="Dangerous - Michael Jackson">
+                    <p>Album de Michael Jackson</p>
+                </div>
+                <div>
+                    <h3>ABBEY ROAD</h3>
+                    <img src="./img/theBeat.jpeg" alt="Abbey Road - The Beatles">
+                    <p>Album de The Beatles</p>
+                </div>
+                <div>
+                    <h3>CALIFORNICATION</h3>
+                    <img src="./img/theBeat.jpeg" alt="Californication - Red Hot Chilli Peppers">
+                    <p>Album de Red Hot Chilli Peppers</p>
+                </div>
+                <div>
+                    <h3>(WHAT'S THE STORY) MORNING GLORY?</h3>
+                    <img src="./img/oasis.jpeg" alt="(What's the Story) Morning Glory? - Oasis">
+                    <p>Album de Oasis</p>
+                </div>
+                <div>
+                    <h3>HOTEL CALIFRONIA</h3>
+                    <img src="./img/H-Cal.jpeg" alt="Hotel Calofornia - Eagles">
+                    <p>Album de Eagles</p>
+                </div>
+            </article>
+            <article>
+                <h2>CANTANTES POPULARES</h2>
+                <div>
+                    <h3>PAULO LONDRA</h3>
+                    <img src="./img/p-londra.jpeg" alt="Paulo Londra">
+                </div>
+                <div>
+                    <h3>MICHAEL JACKSON</h3>
+                    <img src="./img/michael-Jack.jpeg" alt="Michael Jackson">
+                </div>
+                <div>
+                    <h3>ERIC CLAPTON</h3>
+                    <img src="./img/Eric-C.jpeg" alt="Eric Clapton">
+                </div>
+                <div>
+                    <h3>FLO RIDA</h3>
+                    <img src="./img/Florida.jpeg" alt="Flo Rida">
+                </div>
+                <div>
+                    <h3>ED SHEERAN</h3>
+                    <img src="./img/edshee.jpeg" alt="Ed Sheeran">
+                </div>
+            </article>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </main>
     
     <footer>
-        <p class="participantes">Zacarias O'Farrell</p>
-        <p class="participantes">Tomas Arizu</p>
-        <p class="participantes">Tom Brody</p>
+        <div>
+            <a href="./home.html">SOLOBON</a>
+            <img src="./img/music-sessions.jpeg" alt="Music Sessions">
+        </div>
+        <div class="participantes">
+            <p class="participantes">Zacarias O'Farrell</p>
+            <p class="participantes">Tomas Arizu</p>
+            <p class="participantes">Tom Brody</p>
+        </div>
     </footer>
 </body>
 </html>
