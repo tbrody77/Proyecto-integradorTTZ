@@ -1,3 +1,6 @@
+.myBody{background-image:url(../img/backgroundfoto.jpeg);}
+
+
 .logo{
     width: 100px;
 }
@@ -51,6 +54,55 @@
     display: flex;
     flex-wrap:wrap;
     flex-direction: row;
+    width: 700px;
+    padding: 50px;
+}
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.links{
+    background-color: #444;
+    color: white;
+    border: solid 2px black;
+    padding: 3px;
+    margin: 5px;
+    border-radius: 3px;
+    align-self: center;
+    width: 100px;
+    text-decoration: none;
+    text-align: center;
+    height: 104px;
+    justify-content: center;
+    
+}
+.cajalink{
+    display: flex;
+    justify-content: center;
+}
+.claselinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.myFooter{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 0, 0, 0.393);
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 550px;
+}
+.participantes{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(255, 255, 255, 0.393);
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
