@@ -103,3 +103,21 @@
     justify-content: center;
 }
 
+.cancionespopulares{
+    color: black;
+    text-align: center;
+}
+.article{
+    display: flex;
+}
+.img{
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+}
+.canciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
