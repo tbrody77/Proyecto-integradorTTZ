@@ -8,11 +8,49 @@
 }
 
 .imgUB{
-    width: 700px;
-    padding: 50px;
+    width: 250px;
+    margin: 10px;
+    height: 250px;
 }
 
 .pdetallesGeneros{
     font-family: 'Libre Baskerville', serif;
     font-family: 'Work Sans', sans-serif;
 }
+
+.cajaGeneros{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.imgBadb{
+    width: 250px;
+    margin: 10px;
+    height: 250px;
+}
+
+.imgDuki{
+    width: 250px;
+    margin: 10px;
+    height: 250px;
+}
+
+.h2Generos{
+    font-size: 40px;
+}
+.cajaVideo{
+    display: flex;
+    justify-content: center;
+}
+.videogenero{
+    justify-content: center;
+}
+
+.cajaArtistas{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
