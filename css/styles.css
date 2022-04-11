@@ -1,3 +1,5 @@
+.myBody{background-image:url(../img/backgroundfoto.jpeg);}
+
 
 .logo{
     width: 100px;
@@ -11,4 +13,21 @@
 .imgUB{
     width: 700px;
     padding: 50px;
+}
+.myFooter{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 0, 0, 0.393);
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 550px;
+}
+.participantes{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(255, 255, 255, 0.393);
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
