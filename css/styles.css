@@ -62,11 +62,11 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-evenly;
 }
 .links{
-    background-image: url(../img/backgroundfoto.jpeg);
+    
     color: white;
-    border: solid 2px black;
     padding: 3px;
     margin: 5px;
     border-radius: 3px;
