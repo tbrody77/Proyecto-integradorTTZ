@@ -21,28 +21,25 @@
     align-items: center;
 }
 .links{
-    background-color: #444;
+    background-image: url(../img/backgroundfoto.jpeg);
     color: white;
     border: solid 2px black;
     padding: 3px;
     margin: 5px;
     border-radius: 3px;
-    align-self: center;
-    width: 100px;
     text-decoration: none;
-    text-align: center;
-    height: 104px;
-    justify-content: center;
-    
 }
 .cajalink{
     display: flex;
     justify-content: center;
+    height: 62px;
+    align-items: center;
 }
 .claselinks{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .myFooter{
