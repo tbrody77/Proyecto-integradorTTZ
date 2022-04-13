@@ -8,6 +8,7 @@
 .linkUB{
     text-decoration: none;
     font-size: 30px;
+    color: black;
 }
 
 .imgUB{
@@ -38,8 +39,11 @@
     font-size: 40px;
 }
 .cajaVideo{
-    display: flex;
-    justify-content: center;
+    border: solid 4px white;
+    width: 800px;
+    height: 315px
+
+
 }
 .videogenero{
     justify-content: center;
@@ -115,4 +119,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.pdetalleGeneros{
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border: solid 3px white;
+
 }
