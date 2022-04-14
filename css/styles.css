@@ -94,6 +94,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: rgba(29, 31, 31, 0.589)
 }
 .cancionespopulares{
     color: aquamarine;
@@ -156,7 +157,6 @@ p{
     width: 500px;
     height: 500px;
 }
-
 .homerun1{
     font-size: 70px;
     text-decoration: none;
@@ -216,4 +216,11 @@ h1{
 .playlist{
     text-decoration: none;
     color: antiquewhite;
+}
+.logofoot{
+    height: 150px;
+    width: 150px;
+}
+.divf1{
+    background-color: rgba(29, 31, 31, 0.589)
 }
