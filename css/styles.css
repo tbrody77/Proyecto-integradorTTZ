@@ -1,6 +1,7 @@
 .myBody{
     background-image:url(../img/backgroundimgz.jpeg);
     background-position: center;
+    box-sizing: border-box;
 }
 .logo{
     width: 100px;
@@ -62,11 +63,13 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 .links{
-    color: white;
+    color: wheat;
     padding: 3px;
     margin: 5px;
     border-radius: 3px;
     text-decoration: none;
+    font-size: 50px;
+
 }
 .cajalink{
     display: flex;
@@ -243,5 +246,5 @@ h1{
 
 
 @media (max-width: 420px){
-
+    
 }
