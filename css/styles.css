@@ -8,6 +8,8 @@
 .linkUB{
     text-decoration: none;
     font-size: 30px;
+    color: wheat;
+    
 }
 
 .imgUB{
@@ -32,6 +34,10 @@
     margin: 10px;
     height: 250px;
 }
+.cajaUB{
+    display: flex;
+    justify-content: center;
+}
 
 .imgDuki{
     width: 250px;
@@ -42,7 +48,7 @@
 .h2Generos{
     font-size: 40px;
 }
-.cajaVideo{
+.cajavideo{
     display: flex;
     justify-content: center;
 }
@@ -135,7 +141,8 @@ p{
 
 .divmayor{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 .nombrepaulo{
     align-self: center;
@@ -145,4 +152,7 @@ p{
     align-self: center;
     margin-bottom: 10px;
     color: bisque;
+}
+.cant{
+    text-decoration: none;
 }

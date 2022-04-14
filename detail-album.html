@@ -8,17 +8,22 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <header>
+<body class="myBody">
+    <header class="header">
         <div class="cajaLogo">
-            <img src="./img/logo.png" alt="Logo Proyecto" class="logo">
+            <img src="./img/punk_PNG10.png" alt="Logo Proyecto" class="logo">
         </div>
-        <div>
-            <a href="../html/home.html">HOME</a>
-            <a href="../html/favorite.html">FAVORITOS</a>
-            <a href="../html/Genres.html">GÉNEROS</a>
+        <div class="claselinks">
+            <div class="cajalink"><a href="./home.html" class="links">HOME</a></div>
+            <div class="cajalink"><a href="./detailsong.html" class="links">DETAIL TRACK</a></div>
+            <div class="cajalink"><a href="./detail-artist.html" class="links">DETAIL ARTIST</a></div>
+            <div class="cajalink"><a href="./detail-album.html" class="links">DETAIL ALBUM</a></div>
+            <div class="cajalink"><a href="./playlist.html" class="links">PLAYLIST</a></div>
+            <div class="cajalink"><a href="./genres.html" class="links">GENRES</a></div>
+            <div class="cajalink"><a href="./detail-genres.html" class="links">DETAIL GENRES</a></div>
+            <div class="cajalink"><a href="./search-results.html" class="links">SEARCH RESULTS</a></div>
         </div>
-        <div>
+        <div class="cajaforms">
             <form action="./search-results.html" method="GET">
                 <input type="text" id="navegador" name="search" value="" placeholder="Buscar por título">
                 <button type="submit">
@@ -68,9 +73,8 @@
 
     </main>
 
-    <footer>
-        <div>
-            <a href="./home.html">SOLOBON</a>
+    <footer class="myFooter">
+        <div class="divf1">
             <img src="./img/music-sessions.jpeg" alt="Music Sessions">
         </div>
         <div class="participantes">
