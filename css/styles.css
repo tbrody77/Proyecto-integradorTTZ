@@ -11,6 +11,49 @@
 }
 
 .imgUB{
+    width: 250px;
+    margin: 10px;
+    height: 250px;
+}
+
+.pdetallesGeneros{
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.cajaGeneros{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.imgBadb{
+    width: 250px;
+    margin: 10px;
+    height: 250px;
+}
+
+.imgDuki{
+    width: 250px;
+    margin: 10px;
+    height: 250px;
+}
+
+.h2Generos{
+    font-size: 40px;
+}
+.cajaVideo{
+    display: flex;
+    justify-content: center;
+}
+.videogenero{
+    justify-content: center;
+}
+
+.cajaArtistas{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
     width: 700px;
     padding: 50px;
 }
@@ -19,30 +62,27 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-evenly;
 }
 .links{
-    background-color: #444;
+    
     color: white;
-    border: solid 2px black;
     padding: 3px;
     margin: 5px;
     border-radius: 3px;
-    align-self: center;
-    width: 100px;
     text-decoration: none;
-    text-align: center;
-    height: 104px;
-    justify-content: center;
-    
 }
 .cajalink{
     display: flex;
     justify-content: center;
+    height: 62px;
+    align-items: center;
 }
 .claselinks{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .myFooter{
@@ -62,4 +102,9 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-
+ .song1{
+     font-family: Arial, Helvetica, sans-serif;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+ }
