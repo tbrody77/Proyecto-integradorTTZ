@@ -202,11 +202,18 @@ p{
     color: black;
 }
 .seguir{
-    color: black;
+    color: antiquewhite;
     text-decoration: none;
 }
 .mweb{
     text-align: center;
     padding: 0%;
     margin: 0%;
+}
+h1{
+    color: aqua;
+}
+.playlist{
+    text-decoration: none;
+    color: antiquewhite;
 }
