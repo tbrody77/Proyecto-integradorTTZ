@@ -224,9 +224,14 @@ h1{
 .divf1{
     background-color: rgba(29, 31, 31, 0.589)
 }
-
-
-
+.gotop1{
+    text-decoration: none;
+    color: antiquewhite;
+}
+.gotop{
+    display: flex;
+    justify-content: flex-end;
+}
 
 
 
