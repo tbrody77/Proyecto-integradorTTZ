@@ -1,26 +1,22 @@
-.myBody{background-image:url(../img/backgroundfoto.jpeg);}
-
-
+.myBody{
+    background-image:url(../img/backgroundimgz.jpeg);
+    background-position: center;
+}
 .logo{
     width: 100px;
+    margin: 0%;
+    padding: 0%;
 }
-
 .linkUB{
     text-decoration: none;
     font-size: 30px;
+    color: wheat; 
 }
-
 .imgUB{
     width: 250px;
     margin: 10px;
     height: 250px;
 }
-
-.pdetallesGeneros{
-    font-family: 'Libre Baskerville', serif;
-    font-family: 'Work Sans', sans-serif;
-}
-
 .cajaGeneros{
     display: flex;
     flex-wrap:wrap;
@@ -32,24 +28,25 @@
     margin: 10px;
     height: 250px;
 }
-
+.cajaUB{
+    display: flex;
+    justify-content: center;
+}
 .imgDuki{
     width: 250px;
     margin: 10px;
     height: 250px;
 }
-
 .h2Generos{
     font-size: 40px;
 }
-.cajaVideo{
+.cajavideo{
     display: flex;
     justify-content: center;
 }
 .videogenero{
     justify-content: center;
 }
-
 .cajaArtistas{
     display: flex;
     flex-wrap:wrap;
@@ -57,15 +54,14 @@
     width: 700px;
     padding: 50px;
 }
-
 .header{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .links{
-    
     color: white;
     padding: 3px;
     margin: 5px;
@@ -84,27 +80,180 @@
     justify-content: center;
     
 }
-
 .myFooter{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(0, 0, 0, 0.393);
+    font-family: 'Roboto Condensed', sans-serif;
     width: 300px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     margin-left: 550px;
+    margin-top: 105px;
 }
 .participantes{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(255, 255, 255, 0.393);
+    font-family: 'Roboto Condensed', sans-serif;
     width: 300px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: rgba(29, 31, 31, 0.589)
 }
+.cancionespopulares{
+    color: aquamarine;
+    text-align: center;
+    margin: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.article{
+    display: flex;
+}
+.img{
+    height: 300px;
+    width: 250px;
+    margin: 10px;
+}
+.canciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    color: wheat;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+p{
+    color: wheat;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.Paulo{
+    height: 400px;
+    width: 400px;
+    align-self: center;
+    margin-bottom: 10px;
+}
+.divmayor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.nombrepaulo{
+    align-self: center;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.listatemaspaulo{
+    align-self: center;
+    margin-bottom: 10px;
+    color: bisque;
+    text-decoration: none;
+}
+.cant{
+    text-decoration: none;
+}
+.cajaarticle{
+    display: flex;
+    justify-content: space-around;
+}
+<<<<<<< HEAD
  .song1{
      font-family: Arial, Helvetica, sans-serif;
      display: flex;
      flex-wrap: wrap;
      justify-content: center;
  }
+=======
+.imghomerun{
+    width: 500px;
+    height: 500px;
+}
+.homerun1{
+    font-size: 70px;
+    text-decoration: none;
+}
+
+.divpaulo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.nombrepaulo1{
+    align-self: center;
+    color: #f7b439;
+    font-size: 30px;
+    text-decoration: none;
+}
+.UrbanoLatino{
+    align-self: center;
+    color: #f7b439;
+    font-size: 20px;
+    text-decoration: none;
+}
+.fecha{
+    align-self: center;
+    color:#f7b439;
+    font-size: 10px;
+}
+
+.lista{
+    text-decoration: none;
+    color: greenyellow;
+    font-size: 18px;
+    display: flex;
+}
+.item{
+    padding: 3px;
+}
+.myMain{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.pdetallesGeneros{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: black;
+}
+.seguir{
+    color: antiquewhite;
+    text-decoration: none;
+}
+.mweb{
+    text-align: center;
+    padding: 0%;
+    margin: 0%;
+}
+h1{
+    color: aqua;
+}
+.playlist{
+    text-decoration: none;
+    color: antiquewhite;
+}
+.logofoot{
+    height: 150px;
+    width: 150px;
+}
+.divf1{
+    background-color: rgba(29, 31, 31, 0.589)
+}
+.gotop1{
+    text-decoration: none;
+    color: antiquewhite;
+}
+.gotop{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 420px){
+
+}
+
+.letras{text-decoration: none; color: beige;}
+
+.myMain{}
