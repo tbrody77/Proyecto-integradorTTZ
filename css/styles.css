@@ -156,13 +156,6 @@ p{
     display: flex;
     justify-content: space-around;
 }
-HEAD
- .song1{
-     font-family: Arial, Helvetica, sans-serif;
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-}
 .imghomerun{
     width: 500px;
     height: 500px;
@@ -251,8 +244,19 @@ h1{
 
 
 
+<<<<<<< HEAD
 
 
 .letras{text-decoration: none; color: beige;}
 
 .myMain{}
+=======
+@media (max-width: 420px){
+    .canciones{
+        width: 20%;
+    }
+    .cajaarticle{
+        width: 100%;
+    }
+}
+>>>>>>> bce4c7439b298521b5dbf8c8dde50ca8fb3b4dff
