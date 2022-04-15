@@ -246,5 +246,10 @@ h1{
 
 
 @media (max-width: 420px){
-    
+    .canciones{
+        width: 20%;
+    }
+    .cajaarticle{
+        width: 100%;
+    }
 }
