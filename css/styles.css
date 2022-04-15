@@ -156,13 +156,6 @@ p{
     display: flex;
     justify-content: space-around;
 }
-HEAD
- .song1{
-     font-family: Arial, Helvetica, sans-serif;
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-}
 .imghomerun{
     width: 500px;
     height: 500px;
@@ -251,16 +244,11 @@ h1{
 
 
 
-
 @media (max-width: 420px){
-<<<<<<< HEAD
-
+    .canciones{
+        width: 20%;
+    }
+    .cajaarticle{
+        width: 100%;
+    }
 }
-
-.letras{text-decoration: none; color: beige;}
-
-.myMain{}
-=======
-    
-}
->>>>>>> 7617ca4782441ccda199bf059b8206421ef3fdb9
