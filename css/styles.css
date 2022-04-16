@@ -235,6 +235,9 @@ h1{
     display: flex;
     justify-content: flex-end;
 }
+a{
+    text-decoration: none;
+}
 
 
 
