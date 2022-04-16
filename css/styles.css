@@ -252,3 +252,23 @@ h1{
         width: 100%;
     }
 }
+.dsa{
+    text-decoration:none;
+    color: antiquewhite;
+text-align: center;}
+
+.dsT{
+    text-align: center;
+}
+.dsT2{ 
+    text-align: center;
+}
+
+
+.videosolo{ display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: center;}
+
+.letras{text-align: center;
+color: antiquewhite;    
