@@ -235,16 +235,14 @@ h1{
     display: flex;
     justify-content: flex-end;
 }
-
-
-
-
-
-
-
+a{
+    text-decoration: none;
+}
+.letras{text-decoration: none; color: beige;}
 
 
 @media (max-width: 420px){
+ HEAD
     .canciones{
         width: 20%;
     }
@@ -271,4 +269,4 @@ text-align: center;}
     justify-content: center;}
 
 .letras{text-align: center;
-color: antiquewhite;    
+color: antiquewhite;}
