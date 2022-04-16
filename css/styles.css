@@ -203,6 +203,7 @@ p{
 .pdetallesGeneros{
     font-family: 'Roboto Condensed', sans-serif;
     color: black;
+    text-align: justify;
 }
 .seguir{
     color: antiquewhite;
