@@ -238,28 +238,9 @@ h1{
 a{
     text-decoration: none;
 }
-
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
-
-
 .letras{text-decoration: none; color: beige;}
 
-.myMain{}
-=======
+
 @media (max-width: 420px){
-    .canciones{
-        width: 20%;
-    }
-    .cajaarticle{
-        width: 100%;
-    }
+
 }
->>>>>>> bce4c7439b298521b5dbf8c8dde50ca8fb3b4dff
