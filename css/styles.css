@@ -240,21 +240,11 @@ a{
     text-decoration: none;
 }
 .letras{text-decoration: none; color: beige;}
-
-
-@media (max-width: 420px){
- HEAD
-    .canciones{
-        width: 20%;
-    }
-    .cajaarticle{
-        width: 100%;
-    }
-}
 .dsa{
     text-decoration:none;
     color: antiquewhite;
-text-align: center;}
+    text-align: center;
+}
 
 .dsT{
     text-align: center;
@@ -264,13 +254,21 @@ text-align: center;}
 }
 
 
-.videosolo{ display: flex;
+.videosolo{ 
+    display: flex;
     flex-wrap:wrap;
     flex-direction: row;
-    justify-content: center;}
-
-.letras{text-align: center;
-color: antiquewhite;}
+    justify-content: center;
+}
+.letras{
+    text-align: center;
+    color: antiquewhite;
+}
 .listasSR{
     color: antiquewhite;
 }
+
+
+
+
+
