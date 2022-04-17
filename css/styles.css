@@ -1,4 +1,4 @@
-
+@media (max-width: 1530px) {
 .myBody{
     background-image:url(../img/backgroundimgz.jpeg);
     background-position: center;
@@ -89,7 +89,7 @@
     width: 100px;
     display: flex;
     justify-content: center;
-    margin-left: 550px;
+    margin-left: 650px;
     margin-top: 105px;
 }
 .participantes{
@@ -253,8 +253,9 @@ a{
 .dsT2{ 
     text-align: center;
 }
-
-
+.searchresults{
+    text-align: center;
+}
 .videosolo{ 
     display: flex;
     flex-wrap:wrap;
@@ -267,4 +268,11 @@ a{
 }
 .listasSR{
     color: antiquewhite;
+}
+.mayorsr{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 }
