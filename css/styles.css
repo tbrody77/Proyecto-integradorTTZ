@@ -1,3 +1,4 @@
+
 .myBody{
     background-image:url(../img/backgroundimgz.jpeg);
     background-position: center;
@@ -202,7 +203,7 @@ p{
 }
 .pdetallesGeneros{
     font-family: 'Roboto Condensed', sans-serif;
-    color: black;
+    color: bisque;
     text-align: justify;
 }
 .seguir{
@@ -267,8 +268,3 @@ a{
 .listasSR{
     color: antiquewhite;
 }
-
-
-
-
-
