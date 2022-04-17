@@ -276,3 +276,80 @@ a{
     justify-content: space-evenly;
 }
 }
+
+@media (max-width: 430px){
+    .header{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        width: 1000px;
+    }
+    .divcajalogo{
+        width: 100px;
+        height: 200px;
+    }
+    .logo{
+        width: 75px;
+    }
+    .mweb{
+        text-align: center;
+        font-size: 12px;
+    }
+    .links{
+        font-size: 30px;
+    }
+    .myBody{
+        width: 1000px;
+    }
+    .myMain{
+        width: 1000px;
+    }
+    .canciones{
+        width: 260px;
+    }
+    .imghomerun{
+        width: 400px;
+        height: 400px;
+    }
+    .homerun1{
+        font-size: 30px;
+    }
+    .nombrepaulo1{
+        font-size: 22px;
+    }
+    .UrbanoLatino{
+        font-size: 18px;
+    }
+    .lista{
+        font-size: 8px;
+    }
+    .divpaulo{
+        padding: 0%;
+        margin: 0%;
+        justify-content: flex-start;
+    }
+    .myFooter{
+        width: 1000px;
+        padding: 0%;
+        margin: 0%;
+    }
+    .Paulo{
+        width: 400px;
+        height: 400px;
+    }
+    .article{
+        width: 1000px;
+    }
+    .section{
+        width: 1000px;
+    }
+    .gotop{
+        display: flex;
+        justify-content: center;
+    }
+    .sr4{
+        font-size: 12px;
+    }
+
+}
