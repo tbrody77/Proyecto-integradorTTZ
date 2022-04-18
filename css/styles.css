@@ -201,10 +201,13 @@ p{
 .myMain{
     font-family: 'Roboto Condensed', sans-serif;
 }
-.pdetallesGeneros{
+h5{
     font-family: 'Roboto Condensed', sans-serif;
     color: bisque;
     text-align: justify;
+    background-color: black;
+    border: solid 3px white;
+    font-size: 15px;
 }
 .seguir{
     color: antiquewhite;
