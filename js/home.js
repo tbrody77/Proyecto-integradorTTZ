@@ -1,3 +1,18 @@
+let navegador = document.getElementById('navegador');
+
+let form = document.querySelector('.form');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    if (navegador.value == "" || navegador.value.length <= 3) {
+        alert("Esta vacio el campo de busqueda o debe ser mayor a 3 caracteres");
+    } else {
+        this.submit();
+    }
+
+})
+
 let URL = 'https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/tracks'
 
 fetch(URL).then(function(response){
@@ -10,7 +25,6 @@ fetch(URL).then(function(response){
         let canciones = document.querySelector('.articleCanciones');
         let elementosLista = ''
 
-    // preguntar por LINEA 17 COMO PONER LA FOTO
         for(let i=0; i<6; i++){
             elementosLista += `<div class="padre">
                                     <a class="" href="./detailsong.html?id=${info[i].id}"> 
