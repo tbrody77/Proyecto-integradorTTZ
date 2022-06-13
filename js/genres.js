@@ -1,18 +1,25 @@
-let navegador = document.getElementById('navegador');
+let urlUser = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre`;
+ 
+fetch(urlUser)
+    .then(function(response){
+        return response.json()
+    }).then(function(generos){
+        let contenedor = document.querySelector(".listaGenero");
 
-let form = document.querySelector('.form');
+        for (let i = 0; i < generos.data.length; i++) {
+            contenedor.innerHTML += `<li>
+                                        <a href="./detail-genres.html?idGenero=${generos.data[i].id}">${generos.data[i].name}</a>
+                                    </li>`
+        }
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
+         
+        
+    })
+    .catch(function(error){
+        console.log(error);
+    }) 
 
-    if (navegador.value == "" || navegador.value.length <= 3) {
-        alert("Esta vacio el campo de busqueda o debe ser mayor a 3 caracteres");
-    } else {
-        this.submit();
-    }
 
-})
 
-const url = 'https://developers.deezer.com/api/genre ';
 
 
