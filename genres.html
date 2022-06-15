@@ -23,7 +23,7 @@
             <div class="cajalink"><a href="./genres.html" class="links">GENEROS</a></div>
         </div>
         <div class="cajaforms">
-            <form action="./search-results.html" method="GET">
+            <form class="form" action="./search-results.html" method="GET">
                 <input type="text" id="navegador" name="search" value="" placeholder="Buscar por título">
                 <button type="submit">
                  <i class="fas fa-search"></i>
@@ -31,31 +31,21 @@
             </form>
         </div>
     </header>
-
+    
     <main class="myMain">
         <section>
             <article>
-                <a href="./genres.html"><h2 class="h2Generos cancionespopulares">GENEROS</h2></a>
+                <h2 class="h2Generos cancionespopulares">GENEROS</h2>
                 <div class="cajaGeneros">
-
-                    <ul>
-                        <div class="cajaUB"><a class="linkUB" href="./detail-genres.html">URBANO LATINO</a></div>
-                        <div class="cajaimg"><img src="./img/UL.jpg" alt="Urban Latin Music img" class="imgUB">
-                            <img src="./img/badb2.jpg" alt="img bad bunny" class="imgBadb">
-                            <img src="./img/duko.jpg" alt="img duki" class="imgDuki">
-                        </div>
-                        <div class="cajavideo">
-                            <iframe class="videogenero" width="560" height="315" src="https://www.youtube.com/embed/dmW68lzaaqs"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        </div>
+    
+                    <ul class="listaGenero">
+                       
                     </ul>
                 </div>
             </article>
         </section>
     </main>
-
+    
     <footer class="myFooter">
         <div class="divf1">
             <img src="./img/punk_PNG10.png" alt="Logo Proyecto" class="logofoot">
@@ -68,6 +58,9 @@
         </div>
     </footer>
     <div class="gotop"><a href="./genres.html" class="gotop1">GO TOP</a></div>
+
+      
+    <script type="text/javascript" src="./js/genres.js"></script>
 </body>
 
 </html>
