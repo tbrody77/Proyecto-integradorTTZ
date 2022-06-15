@@ -27,17 +27,11 @@ fetch (url1)
         console.log(data);
 
         let title = document.querySelector ('h1');
-        let nombreArtista = document.querySelector ('.nombreArtista');
-        let nombreGenero = document.querySelector ('.nombreGenero');
-        let fechaDeEstreno = document.querySelector ('.fechaDeEstreno');
         let imgAlbum = document.querySelector ('.imgAlbum');
         let temasAlbum = document.querySelector ('.temasalbum');
 
-        title.innerText = data.title;
-        nombreArtista.innerText = data.artist.name
-        nombreGenero.innerText = data.genres.data[0].name
-        fechaDeEstreno.innerText = data.release_date
-        imgAlbum.innerText = data.cover
+        title.innerText = data.name;
+        imgAlbum.innerText = data.picture_medium
         temasAlbum.innerText = data.tracks
 
 

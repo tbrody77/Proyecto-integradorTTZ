@@ -34,17 +34,25 @@ fetch (url1)
         let nombreGenero = document.querySelector ('.nombreGenero');
         let fechaDeEstreno = document.querySelector ('.fechaDeEstreno');
         let imgAlbum = document.querySelector ('.imgAlbum');
-        let temasAlbum = document.querySelector ('.temasalbum');
+        let temasAlbum = document.querySelector ('.temasAlbum');
+        let temas = document.querySelector ('.temas')
 
         title.innerText = data.title;
         nombreArtista.innerText = data.artist.name
         nombreGenero.innerText = data.genres.data[0].name
         fechaDeEstreno.innerText = data.release_date
-        imgAlbum.innerText = data.cover
-        temasAlbum.innerText = data.tracks
+        imgAlbum.innerText = data.cover_medium    //NO ME QUEDA
+        temasAlbum.innerText = data.tracks        //Esta MAL
+
+        for (let i = 0; i < data.tracks.length; i++) {
+            const element = array[i];
+            
+        }
+
+        
 
 
-        imgAlbum.innerText = data.cover
+    
 
     })
     .catch(function(error){
