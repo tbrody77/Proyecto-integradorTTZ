@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 let navegador = document.getElementById('navegador');
 
 let form = document.querySelector('.form');
@@ -13,13 +12,13 @@ form.addEventListener('submit', function(e) {
     }
 
 })
-=======
+
 let URL = 'https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/tracks'
 
 fetch(URL).then(function(response){
     return response.json()
 }).then(function(data){
-    console.log(data.data);
+    console.log("TRACKS", data.data);
 
     let info = data.results; 
         
@@ -110,4 +109,3 @@ fetch(URLAlbum)
     .catch(function(error){
         console.log(error);
     }) 
->>>>>>> b8d9e81895c66c9911bd83ad2b985ae5ee282fab
