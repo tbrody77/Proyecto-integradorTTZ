@@ -28,7 +28,7 @@ fetch (url1)
 
         let title = document.querySelector ('h1');
         let imgAlbum = document.querySelector ('.portada');
-        let temasAlbum = document.querySelector ('.temasalbum');
+        let temasAlbum = document.querySelector ('.temasAlbum');
 
         title.innerText = data.name;
         
@@ -75,3 +75,28 @@ fav.addEventListener ('click', function (e) {
     let favsAStirng = JSON.stringify(albumFav);
     localStorage.setItem('albumFav', favsAStirng) 
 }) 
+
+
+const urlCanciones = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}/top?limit=5`
+
+fetch(urlCanciones)
+.then(function (response) {
+    return response.json();
+}).then(function (canciones) {
+    console.log(canciones.data);
+
+let temas = document.querySelector ('.temasAlbum')
+    for (let i = 0; i < data.tracks.length; i++) {
+        
+        console.log(element)
+        
+        
+        temas.innerText+=` <li>${element}</li>`
+    }
+
+
+
+
+}).catch(function(errores) {
+  console.log(errores);  
+})

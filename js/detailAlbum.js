@@ -41,18 +41,8 @@ fetch (url1)
         nombreArtista.innerText = data.artist.name
         nombreGenero.innerText = data.genres.data[0].name
         fechaDeEstreno.innerText = data.release_date
-        imgAlbum.src = data.cover_medium
-        temasAlbum.innerText = data.tracks        //Esta MAL
-
-        for (let i = 0; i < data.tracks.length; i++) {
-            const element = array[i];
-            
-        }
-
+        imgAlbum.src = data.cover_medium    
         
-
-
-    
 
     })
     .catch(function(error){
