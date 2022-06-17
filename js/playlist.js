@@ -27,7 +27,7 @@ let personajesFavoritos = '';
 /* Evaluar el localStorage */
 
 if (favoritos == null || favoritos.length == 0) {
-    section.innerHTML = '<p>No hay items en favoritos</p>';
+    section.innerHTML = '<p>No hay items en Favoritos</p>';
 } else {
     /* Si contiene elementos */
 

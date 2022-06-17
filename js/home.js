@@ -25,7 +25,7 @@ fetch(URL).then(function(response){
         let canciones = document.querySelector('.articleCanciones');
         let elementosLista = ''
 
-        for(let i=0; i<6; i++){
+        for(let i=0; i<5; i++){
             elementosLista += `<div class="padre">
                                     <a class="" href="./detailsong.html?id=${info[i].id}"> 
                                         <p class="nombrecancion">${info[i].title}</p>
@@ -56,7 +56,7 @@ fetch(URLAlbum)
         let elementosLista = ''
 
         
-        for(let i=0; i<6; i++){
+        for(let i=0; i<5; i++){
             elementosLista += `<div class="padre1">
                                     <a class="peli" href="./detail-album.html?id=${info[i].id}" > 
                                         <img src=${info[i].cover} alt="${info[i].title}">
@@ -93,7 +93,7 @@ fetch(URLAlbum)
         let elementosLista = ''
 
         
-        for(let i=0; i<6; i++){
+        for(let i=0; i<5; i++){
             elementosLista += `<div class="cantantesPopulares">
             <a href="./detail-artist.html?id=${info[i].id}" class="canciones">
             <img src="     ${info[i].picture}" alt="${info[i].name}">

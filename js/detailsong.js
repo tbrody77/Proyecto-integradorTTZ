@@ -1,5 +1,6 @@
 let navegador = document.getElementById('navegador');
 
+/*
 let form = document.querySelector('.form');
 
 form.addEventListener('submit', function(e) {
@@ -11,27 +12,40 @@ form.addEventListener('submit', function(e) {
         this.submit();
     }
 
-})
+})*/
 
-let proxy = "https://developers.deezer.com/api/track "
-let endpoint = "https://api.allorigins.win/raw?url=https://api.deezer.com/track"
+let qs = location.search; 
+let qtso = new URLSearchParams(qs); 
+let id = qtso.get('id');
+let url1 = 'https://api.deezer.com/track/' + id;
+let playerURL = "https://widget.deezer.com/widget/dark/track/" + id;
+let player = document.querySelector('.player');
+player.src = playerURL;
 
-
-let qs= location.search;
-letqsOL = new URLSearchParams (qs)
-let idPJ = qSOL.get ('id')
-console.log(iDPJ)
-
-fetch (endpoint)
-fetch(endpoint)
-    .then(function (response) {
-        return response.json();
+fetch (url1)
+    .then (function (response) {
+        return response.json()
     })
-    .then(function(data) {
-        console.log(data)
+    .then (function (data) {
+        console.log(data);
 
-        ;
-    })
- .catch(function(error){
-     console.log(error);
+        let title = document.querySelector('.tituloCancion');
+        let imgAlbum = document.querySelector ('.imgAlbum');
+        let artista = document.querySelector('.nombreArtista');
+        let disco = document.querySelector('.tituloDisco');
+        
+        title.innerText = data.title;
+        disco.innerText = data.album.title;
+        artista.innerText = data.artist.name;
+        
+        imgAlbum.src = data.album.cover;
+
+        
+        //temasAlbum.innerText = data.tracks
+        //imgAlbum.innerText = data.picture_medium;
+
+        //imgAlbum.innerText = data.cover
  })
+    .catch(function(error){
+        console.log(error);
+    })
