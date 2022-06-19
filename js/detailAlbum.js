@@ -82,3 +82,6 @@ fav.addEventListener ('click', function (e) {
     let favsAStirng = JSON.stringify(albumFav);
     localStorage.setItem('albumFav', favsAStirng) 
 }) 
+
+
+let urlAlbumCancion = `https://api.allorigins.win/raw?url=https://api.deezer.com/album/${id}/top?limit=5`

@@ -16,7 +16,7 @@ form.addEventListener('submit', function(e) {
 let qs = location.search; 
 let qtso = new URLSearchParams(qs); 
 let id = qtso.get('id'); 
-let url1 = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}` ;
+let url1 = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}` ;
 
 
 fetch (url1)
