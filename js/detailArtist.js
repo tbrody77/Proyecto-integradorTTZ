@@ -31,9 +31,6 @@ fetch (url1)
         let temasAlbum = document.querySelector ('.temasAlbum');
 
         title.innerText = data.name;
-        
-        temasAlbum.innerText = data.tracks
-
 
         imgAlbum.innerHTML += `<img src="${data.picture_medium}" alt="">`
 
@@ -77,7 +74,7 @@ fav.addEventListener ('click', function (e) {
 }) 
 
 
-const urlCanciones = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}/top?limit=5`
+const urlCanciones = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/top?limit=5`
 
 fetch(urlCanciones)
 .then(function (response) {
@@ -87,10 +84,8 @@ fetch(urlCanciones)
 
 let temas = document.querySelector ('.temasAlbum')
     for (let i = 0; i < data.tracks.length; i++) {
-        
         console.log(element)
-        
-        
+
         temas.innerText+=` <li>${element}</li>`
     }
 
