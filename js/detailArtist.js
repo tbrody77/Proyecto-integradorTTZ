@@ -16,7 +16,7 @@ form.addEventListener('submit', function(e) {
 let qs = location.search; 
 let qtso = new URLSearchParams(qs); 
 let id = qtso.get('id'); 
-let url1 = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}` ;
+let url1 = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}` ;
 
 
 fetch (url1)
@@ -32,7 +32,7 @@ fetch (url1)
 
         title.innerText = data.name;
 
-        imgAlbum.innerHTML += `<img src="${data.picture_medium}" alt="">`
+        imgAlbum.innerHTML += `<img src="${data.picture_medium}" alt="" class="img912">`
 
     })
     .catch(function(error){
@@ -74,24 +74,22 @@ fav.addEventListener ('click', function (e) {
 }) 
 
 
-const urlCanciones = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/top?limit=5`
+const urlCanciones = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}/albums`
+
+
 
 fetch(urlCanciones)
 .then(function (response) {
     return response.json();
-}).then(function (canciones) {
-    console.log(canciones.data);
+}).then(function (data) {
+    console.log(data);
 
-let temas = document.querySelector ('.temasAlbum')
-    for (let i = 0; i < data.tracks.length; i++) {
-        console.log(element)
-
-        temas.innerText+=` <li>${element}</li>`
+    let detalle = document.querySelector('.detalles');
+    for (let i = 0; i <6; i++) {
+    detalle.innerHTML +=`<a href="./detallealbum.html?id=${data.data[i].id}"> <li class="albums">${data.data[i].title}</li> </a>`
     }
-
-
-
 
 }).catch(function(errores) {
   console.log(errores);  
 })
+

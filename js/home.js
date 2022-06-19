@@ -13,7 +13,7 @@ form.addEventListener('submit', function(e) {
 
 })
 
-let URL = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks'
+let URL = 'https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/tracks'
 
 fetch(URL).then(function(response){
     return response.json()
@@ -42,7 +42,7 @@ fetch(URL).then(function(response){
 
 
 
-let URLAlbum = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums"
+let URLAlbum = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/albums"
 
 fetch(URLAlbum)
     .then(function(response){
@@ -78,7 +78,7 @@ fetch(URLAlbum)
     
     
     
-    let URLCantantes = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artists"
+    let URLCantantes = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
     
     
     fetch(URLCantantes)
