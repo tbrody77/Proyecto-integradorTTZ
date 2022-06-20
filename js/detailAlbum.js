@@ -92,13 +92,16 @@ fetch(urlAlbumCancion)
 .then(function (response) {
     return response.json();
 }).then(function (data) {
-    console.log(data);
+    console.log(data.data);
 
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.data.length; i++) {
         let listaAlbum = document.querySelector('.temasAlbum')
-        listaAlbum.innerHTML += `<li>${data.data}</li>`
+        listaAlbum.innerHTML   += `<li>${data.data[i].title}</li>`
     }
     
+    
+
+
 }).catch(function(errores) {
   console.log(errores);  
 })
