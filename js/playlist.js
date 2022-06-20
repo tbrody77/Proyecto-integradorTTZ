@@ -37,12 +37,10 @@ if (fav_arr == null || fav_arr.length == 0) {
         /* Buscar el personaje */
         let id = fav_arr[i];
         const URL = 'https://api.allorigins.win/raw?url=https://api.deezer.com/track/' + id;
+    
 
-        fetch(URL)
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data){
+            
+            then(function(data){
                 personajesFavoritos += `<a href="/detailsong.html?id=${id}">
                                             <article>
                                                 <img src=${data.album.cover}>
@@ -50,10 +48,4 @@ if (fav_arr == null || fav_arr.length == 0) {
                                                 
                                                 </article> 
                                                 <hr></a>` 
-                                                
-                section.innerHTML = personajesFavoritos;
-            }).catch(function (error) {
-                console.log(error);
-            })
-    }
-}
+                        
