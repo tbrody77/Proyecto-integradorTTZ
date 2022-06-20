@@ -12,8 +12,8 @@ fetch(urlUser)
         for (let i = 0; i < generos.data.length; i++) {
             contenedor += `<article class="articleGenero">
                                         <a href="./detail-genres.html?idGenero=${generos.data[i].id}">
-                                        <p class="nombreGenero">${generos.data[i].name}</p>
                                         <img src=${generos.data[i].picture_medium} alt="${generos.data[i].name}">
+                                        <p class="nombreGenero">${generos.data[i].name}</p>
                                         </a>
                             
                                     </article>`

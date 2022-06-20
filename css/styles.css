@@ -528,4 +528,32 @@ a{
 }
 
 
+.sectionDG{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.pDG{
+    text-align: center;
+}
+.h2G{
+    text-align: center;
+    font-size: 35px;
+    color: aquamarine;
+    margin: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#generosid{
+    text-align: center;
+    font-size: 35px;
+    color: aquamarine;
+    margin: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.artistas1{
+    color: aquamarine;
+}
+
+
 
