@@ -84,26 +84,23 @@ fav.addEventListener ('click', function (e) {
 }) 
 
 
-let urlAlbumCancion = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}/top`
+let urlAlbumCancion = `https://api.allorigins.win/raw?url=https://api.deezer.com/album/${id}/tracks`
 
 
 
 fetch(urlAlbumCancion)
 .then(function (response) {
     return response.json();
-}).then(function (canciones) {
-    console.log(canciones.data);
+}).then(function (data) {
+    console.log(data);
 
-let temas = document.querySelector ('.temas')
-    for (let i = 0; i < data.tracks.length; i++) {
-        console.log(element)
-
-        temas.innerText+=` <li>${element}</li>`
+    for (let i = 0; i < data.length; i++) {
+        let listaAlbum = document.querySelector('.temasAlbum')
+        listaAlbum.innerHTML += `<li>${data.data}</li>`
     }
-
-
-
-
+    
 }).catch(function(errores) {
   console.log(errores);  
 })
+
+
