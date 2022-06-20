@@ -36,7 +36,7 @@ if (fav_arr == null || fav_arr.length == 0) {
     for (let i = 0; i < fav_arr.length; i++) {
         /* Buscar el personaje */
         let id = fav_arr[i];
-        const URL = 'https://api.deezer.com/track/' + id;
+        const URL = 'https://api.allorigins.win/raw?url=https://api.deezer.com/track/' + id;
 
         fetch(URL)
             .then(function(response) {
