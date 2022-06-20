@@ -1,12 +1,12 @@
-let queryString= location.search;
-let qsToObject = new URLSearchParams(queryString);
-let idDetalle = qsToObject.get('id');
-
+let qs = location.search; 
+let qtso = new URLSearchParams(qs); 
+let id = qtso.get('id'); 
+console.log(id);
 let generos = document.querySelector("#generosid");
 let artist = document.querySelector('.contenedorGenero');
 
 
-let url1 = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${idDetalle}/`;
+let url1 = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${id}`;
 fetch(url1)
     .then(function(response){
         return response.json()
@@ -16,22 +16,26 @@ fetch(url1)
         document.querySelector(".contenedorGenero").innerHTML += `<h2> Genero: ${data.name}</h2>`;   
     
     //artistas
-let url2 = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${idDetalle}/artists`;
+let url2 = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${id}/artists`;
 fetch(url2)
     .then(function(response){
         return response.json()
     })
     .then(function(data){
-        console.log("artista",data.data);
+        console.log(data.data);
 
-        for (let i = 0; i < data.data.length; i++) {
+        
+
+        
+
+        // for (let i = 0; i < data.data.length; i++) {
             
-           document.querySelector('.artistas').innerHTML += `<div class="divartistas"> 
-            <img class="imagenartistas" src="${data.data[i].picture}" alt="" height="100px" width="100px"></div>
-            <a class="divartistas" href="./detail-artist.html?id=${data.data[i].id}">${data.data[i].name}</a>
-             `
+        //    document.querySelector('.artistas').innerHTML += `<div class="divartistas"> 
+        //     <img class="imagenartistas" src="${data.data[i].picture}" alt="" height="100px" width="100px"></div>
+        //     <a class="divartistas" href="./detail-artist.html?id=${data.data[i].id}">${data.data[i].name}</a>
+        //      `
             
-        }
+        // }
         })
 
 
