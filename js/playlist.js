@@ -1,6 +1,6 @@
 let navegador = document.getElementById('navegador');
 
-/*
+
 let form = document.querySelector('.form');
 
 form.addEventListener('submit', function(e) {
@@ -13,9 +13,9 @@ form.addEventListener('submit', function(e) {
     }
     
 })
-*/
 
-const url = 'https://api.allorigins.win/raw?url=https://developers.deezer.com/api/chart ';
+
+
 
 let fav_arr = JSON.parse(localStorage.getItem('favs'));
 //let favoritos = JSON.parse(recuperoStorage);
@@ -57,3 +57,21 @@ if (fav_arr == null || fav_arr.length == 0) {
             })
     }
 }
+
+fav.addEventListener ('click', function (e) {
+    e.preventDefault();
+
+    if (albumFav.includes(id)) { 
+        let indice = albumFav.indexOf(id);
+        albumFav.splice(indice, 1);
+        botonFav.innerText = 'Agregar a favoritos'
+    } 
+    else {
+    albumFav.push(id);
+        botonFav.innerHTML = 'Quitar de Favoritos';
+    }
+    console.log(albumFav);
+    
+    let favsAStirng = JSON.stringify(albumFav);
+    localStorage.setItem('albumFav', favsAStirng) 
+}) 
