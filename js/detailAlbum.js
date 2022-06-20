@@ -41,18 +41,8 @@ fetch (url1)
         nombreArtista.innerText = data.artist.name
         nombreGenero.innerText = data.genres.data[0].name
         fechaDeEstreno.innerText = data.release_date
-        imgAlbum.innerText = data.cover_medium    //NO ME QUEDA
-        temasAlbum.innerText = data.tracks        //Esta MAL
-
-        for (let i = 0; i < data.tracks.length; i++) {
-            const element = array[i];
-            
-        }
-
+        imgAlbum.src = data.cover_medium    
         
-
-
-    
 
     })
     .catch(function(error){
@@ -92,3 +82,25 @@ fav.addEventListener ('click', function (e) {
     let favsAStirng = JSON.stringify(albumFav);
     localStorage.setItem('albumFav', favsAStirng) 
 }) 
+
+
+let urlAlbumCancion = `https://api.allorigins.win/raw?url=https://api.deezer.com/album/${id}/tracks`
+
+
+
+fetch(urlAlbumCancion)
+.then(function (response) {
+    return response.json();
+}).then(function (data) {
+    console.log(data);
+
+    for (let i = 0; i < data.length; i++) {
+        let listaAlbum = document.querySelector('.temasAlbum')
+        listaAlbum.innerHTML += `<li>${data.data}</li>`
+    }
+    
+}).catch(function(errores) {
+  console.log(errores);  
+})
+
+

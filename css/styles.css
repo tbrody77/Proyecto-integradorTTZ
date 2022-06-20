@@ -158,7 +158,11 @@ p{
 }
 .cajaarticle{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+}
+.img912{
+    height: 250px;
+    width: 250px;
 }
 .imghomerun{
     width: 500px;
@@ -191,7 +195,6 @@ p{
     color:#f7b439;
     font-size: 10px;
 }
-
 .lista{
     text-decoration: none;
     color: greenyellow;
@@ -324,7 +327,6 @@ a{
     color:bisque;
 }
 .info{
-    background-color:saddlebrown;
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -333,9 +335,20 @@ a{
 .botonFav{
     color: darkred;
 }
-
+.listaAA{
+    justify-items: center;
+    justify-self: center;
+}
 ul{
-    list-style-type: none;
+    list-style-type: none; 
+    text-align: center;
+}
+.detalles1{
+    text-decoration: underline ;
+    color:white;
+}
+.albums{
+    color: wheat;
 }
 .articleCanciones{
     display: flex;
