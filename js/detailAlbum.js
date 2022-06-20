@@ -96,6 +96,7 @@ fetch(urlAlbumCancion)
 
     for (let i = 0; i < data.data.length; i++) {
         let listaAlbum = document.querySelector('.temasAlbum')
+
         listaAlbum.innerHTML += `<a href="./detailsong.html?id=${data.data[i].id}"><li>${data.data[i].title}</li></a>`
     }
     

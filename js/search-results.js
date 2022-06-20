@@ -16,7 +16,7 @@ form.addEventListener('submit', function(e) {
 let objeto = new URLSearchParams (location.search);
 let search = objeto.get("search");
 
-fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${search}`)
+fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/search?q=${search}`)
 
 .then( function(respuesta){
     return respuesta.json()
@@ -27,18 +27,17 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${sea
     let resultados = busqueda.data;
     let resultadosB = document.querySelector(".articulo1");
     let encabezado = document.querySelector("#busqueda");
+
+    
     
     encabezado.innerText += `${search}`
     for(let i = 0; i < 12; i++){
 
 
             resultadosB.innerHTML += `
-            
-
-
             <div class="div1"> 
-        <a href="detallecancion.html" class="sinDelineado"?id=${busqueda.data[i].id}"><img  class="foto" src=${busqueda.data[i].album.cover}></a>
-        <a class="ahome" href="detallecancion.html" class="sinDelineado""><h4  class="albums2322" >${busqueda.data[i].title}</h4></a> 
+        <a href="./detailsong.html?id=${busqueda.data[i].id}" class="sinDelineado"?id=${busqueda.data[i].id}"><img  class="foto" src=${busqueda.data[i].album.cover}></a>
+        <a class="ahome" href="./detailsong.html?id=${busqueda.data[i].id}" class="sinDelineado""><h4  class="albums2322" >${busqueda.data[i].title}</h4></a> 
         </div>
             `
 
