@@ -1,88 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MSound</title>
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-</head>
-
-<body class="myBody">
+  <body class="myBody">
     <header class="header">
-        <div class="cajaLogo">
-            <img src="./img/punk_PNG10.png" alt="Logo Proyecto" class="logo">
-            <p class="mweb">MSOUND</p>
+      <div class="cajaLogo">
+        <img src="./img/punk_PNG10.png" alt="Logo Proyecto" class="logo" />
+        <p class="mweb">MSOUND</p>
+      </div>
+      <div class="claselinks">
+        <div class="cajalink"><a href="./home.html" class="links">HOME</a></div>
+        <div class="cajalink">
+          <a href="./playlist.html" class="links">PLAYLIST</a>
         </div>
-        <div class="claselinks">
-          <div class="cajalink"><a href="./home.html" class="links">HOME</a></div>
-          <div class="cajalink"><a href="./playlist.html" class="links">PLAYLIST</a></div>
-          <div class="cajalink"><a href="./genres.html" class="links">GENEROS</a></div>
+        <div class="cajalink">
+          <a href="./genres.html" class="links">GENEROS</a>
         </div>
-        <div class="cajaforms">
-            <form class="form" action="./search-results.html" method="GET">
-                <input type="text" id="navegador" name="search" value="" placeholder="Buscar por título">
-                <button type="submit">
-                 <i class="fas fa-search"></i>
-                </button>
-            </form>
-        </div>
-        
+      </div>
+      <div class="cajaforms">
+        <form action="./search-results.html" method="GET">
+          <input
+            type="text"
+            id="navegador"
+            name="search"
+            value=""
+            placeholder="Buscar por título"
+          />
+          <button type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
     </header>
+    <main>
+      <section>
+        <article class="cajaarticle">
+          <div class="portada">
+            <img class="imgAlbum" src="" alt="" />
+          </div>
+          <div class="info">
+            <h1 class="tituloCancion"></h1>
+            <h1 class="nombreArtista"></h1>
+            <h1 class="tituloDisco"></h1>
+            <br>
+            <br>
 
+            
+            <button onclick="addToPlaylist()" class="botonFav">Añadir a PlayList</button>
+            
+          </div>
+          <br>
+          <br>
+          <iframe
+            class="player"
+            title="deezer-widget"
+            src=""
+            width="100%"
+            height="300"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media; clipboard-write"
+          ></iframe>
+        </article>
+      </section>
 
-
-
-  <main class="myMain">
-    <div class="dsa">
-      <a href="./detail-album.html">
-        <h1>HOMERUN</h1>
-        <a href="./detail-artist.html">
-          <h3>PAULO LONDRA</h3>
-        </a>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/N97saaTR7JE" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe> <a href="https://www.youtube.com/watch?v=N97saaTR7JE" target="_blank"><i
-            class="fa-solid fa-play"></i></a>
-    </div>
-
-    <div class="letras">
-      <input type="button" value="+"> Agregar Homerun a la playlist
-      <br>
-      <br>
-
-      <a href="./playlist.html"></a> 
-      <input type="button" value="Homerun">
-    </div>
-    <br>
-    <br>
-    <a href="./playlist.html" class="playlist">Playlist</a>
-    </div>
-
+      <a href="./playlist.html">PlayList</a>
     </main>
-       <br>
-       <footer class="myFooter">
-        <div class="divf1">
-          <img src="./img/punk_PNG10.png" alt="Logo Proyecto" class="logofoot">
-          <p class="mweb">MSOUND</p>
-        </div>
-        <div class="participantes">
-            <p class="participantes">Zacarias O'Farrell</p>
-            <p class="participantes">Tomas Arizu</p>
-            <p class="participantes">Tom Brody</p>
-        </div>
+
+    <br />
+    <footer class="myFooter">
+      <div class="divf1">
+        <img src="./img/punk_PNG10.png" alt="Logo Proyecto" class="logofoot" />
+        <p class="mweb">MSOUND</p>
+      </div>
+      <div class="participantes">
+        <p class="participantes">Zacarias O'Farrell</p>
+        <p class="participantes">Tomas Arizu</p>
+        <p class="participantes">Tom Brody</p>
+      </div>
     </footer>
-    <div class="gotop"><a href="./detailsong.html" class="gotop1">GO TOP</a></div>
-    <script type="text/javascript" src="./js/detailsong.js"></script>
+    <div class="gotop">
+      <a href="./detailsong.html" class="gotop1">GO TOP</a>
+    </div>
+    <script src="./js/detailsong.js"></script>
   </body>
-
-  <div class="gotop"><a href="./detailsong.html" class="gotop1">GO TOP</a></div>
-</body>
-
 </html>

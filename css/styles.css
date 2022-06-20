@@ -272,7 +272,6 @@ a{
 .videosolo{ 
     display: flex;
     flex-wrap:wrap;
-    flex-direction: row;
     justify-content: center;
 }
 .letras{
@@ -502,7 +501,7 @@ a{
 }
 .nombreGenero{
 
-    color: wheat;
+    
     font-size: 15px;
     text-align: center;
 }
