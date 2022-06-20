@@ -528,4 +528,15 @@ a{
 }
 
 
+.sectionDG{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.pDG{
+    text-align: center;
+}
+
+
 

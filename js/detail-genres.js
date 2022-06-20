@@ -25,20 +25,23 @@ fetch(url2)
     .then(function(data){
         console.log(data.data);
 
+        let section = document.querySelector(".sectionDG");
+        let contenedor = "";
+
         for (let i = 0; i < data.data.length; i++) {
             
-           document.querySelector('.artistas').innerHTML += `<div class="divartistas">
-           <a class="divartistas" href="./detail-artist.html?id=${data.data[i].id}"> 
-            <img class="imagenartistas" src="${data.data[i].picture}" alt="" height="100px" width="100px"></div>
-            ${data.data[i].name}</a>
-             `
+           contenedor += `<article class="articleArtistas">
+            <a class="aDG" href="./detail-artist.html?id=${data.data[i].id}"> 
+            <img class="imagenArtistas" src="${data.data[i].picture}" alt="" height="100px" width="100px">
+            <p class = "pDG">${data.data[i].name}</p></a>
+            </article>`
             
         }
+        section.innerHTML = contenedor;
+        section.style.display = "flex";
+        section.style.flexDirection = "row";
         })
-
-
-        //section.style.display = "flex";
-        //section.style.flexDirection = "row";
+        
 })
 
     .catch(function(error){
