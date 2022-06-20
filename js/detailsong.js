@@ -17,7 +17,7 @@ form.addEventListener('submit', function(e) {
 let qs = location.search; 
 let qtso = new URLSearchParams(qs); 
 let id = qtso.get('id');
-let url1 = 'https://api.deezer.com/track/' + id;
+let url1 = 'https://api.allorigins.win/raw?url=https://api.deezer.com/track/' + id;
 let playerURL = "https://widget.deezer.com/widget/dark/track/" + id;
 let player = document.querySelector('.player');
 player.src = playerURL;

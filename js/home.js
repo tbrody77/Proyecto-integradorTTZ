@@ -18,7 +18,7 @@ let URL = 'https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/tra
 fetch(URL).then(function(response){
     return response.json()
 }).then(function(data){
-    console.log(data.data);
+    console.log("TRACKS", data.data);
 
     let info = data.data; 
         
@@ -106,3 +106,4 @@ fetch(URLAlbum)
     .catch(function(error){
         console.log(error);
     }) 
+

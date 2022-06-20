@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MSound</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,34 +37,48 @@
     </header>
 
     <main class="myMain searchresults">
-        <img src="./img/p-londra.jpeg" alt="Foto Paulo Londra" class="paulo">
-        <h1>Paulo Londra</h1>
-        <h3>Artista Nro.2 mas escuchado del mundo luego de su nuevo lanzamiento, "Plan A"</h3>
-        <p class="sr4">Paulo Ezequiel Londra Farias es un cantante, compositor y rapero argentino. Surgio de
-                competencias amateurs de freestyle y se convirtio muy popular en toda Latinoamerica.</p>
+        <header class="header">
 
-            <div class="mayorsr">
-                <div class="menorsr">
-                    <h3>Top 5 Canciones:</h3>
-                    <ol class="listasSR">
-                        <li> Adan y Eva</li>
-                        <li>Homerun</li>
-                        <li>Forever Alone</li>
-                        <li>Demasiado Loco</li>
-                        <li>Por eso vine</li>
-                    </ol>
-                </div>
-                <div class="menorsr">
-                    <h3>Top 5 Albums</h3>
-                    <ol class="listasSR">
-                        <li>Adan y Eva</li>
-                        <li>Homerun</li>
-                        <li>Sencillo</li>
-                        <li>Tal vez</li>
-                        <li>Chica paranormal</li>
-                    </ol>
-                </div>
+            <figure class="logo">
+                <a href="./home.html" class="logo"><i class="fas fa-compact-disc"></i></a>
+            </figure>
+    
+            <div class="buscador1">
+                <form action="./search-results.html" method= "GET" class="buscador">
+                <input type="text" name="search" value="" placeholder="busqueda" class="search">
+                <button type="submit">Search</button>
+            </form>
             </div>
+    
+            <h1 class="h1">MUSICIAN</h1>
+    
+    
+            <nav class="container">
+    
+                <ul class="nav-bar">
+                    <li type="none" class="content2"> <a href="./home.html" class="content2">HOME</a></li>
+                    <li type="none" class="content2"> <a href="./playlist.html" class="content2">PLAYLIST</a></li>
+                    <li type="none" class="content2"> <a href="./genres.html" class="content2" >GÉNEROS</a></li>
+                    <li type="none" class="content2"> <a href="./detail-album.html" class="content2">ALBUMES</a></li>
+                    <li type="none" class="content2"> <a href="./detail-artist.html" class="content2">ARTISTAS</a></li>
+                </ul>
+        
+            </nav>
+    
+        </header>
+    
+        <main class="busqueda">
+    
+    
+                <section class="canciones">
+                    <h2 id="busqueda"> Resultado de busqueda para: </h2>
+                    <article class="articulo1">
+                    
+        
+                    </article>
+    
+                </section>
+        </main>
     </main>
 
     <footer class="myFooter">

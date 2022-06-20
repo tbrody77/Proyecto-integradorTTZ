@@ -15,7 +15,7 @@ form.addEventListener('submit', function(e) {
 })
 */
 
-const url = 'https://developers.deezer.com/api/chart ';
+const url = 'https://api.allorigins.win/raw?url=https://developers.deezer.com/api/chart ';
 
 let fav_arr = JSON.parse(localStorage.getItem('favs'));
 //let favoritos = JSON.parse(recuperoStorage);

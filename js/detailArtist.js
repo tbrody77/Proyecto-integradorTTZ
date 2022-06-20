@@ -28,14 +28,11 @@ fetch (url1)
 
         let title = document.querySelector ('h1');
         let imgAlbum = document.querySelector ('.portada');
-        let temasAlbum = document.querySelector ('.temasalbum');
+        let temasAlbum = document.querySelector ('.temasAlbum');
 
         title.innerText = data.name;
-        
-        temasAlbum.innerText = data.tracks
 
-
-        imgAlbum.innerHTML += `<img src="${data.picture_medium}" alt="">`
+        imgAlbum.innerHTML += `<img src="${data.picture_medium}" alt="" class="img912">`
 
     })
     .catch(function(error){
@@ -75,3 +72,24 @@ fav.addEventListener ('click', function (e) {
     let favsAStirng = JSON.stringify(albumFav);
     localStorage.setItem('albumFav', favsAStirng) 
 }) 
+
+
+const urlCanciones = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}/albums`
+
+
+
+fetch(urlCanciones)
+.then(function (response) {
+    return response.json();
+}).then(function (data) {
+    console.log(data);
+
+    let detalle = document.querySelector('.detalles');
+    for (let i = 0; i <6; i++) {
+    detalle.innerHTML +=`<a href="./detallealbum.html?id=${data.data[i].id}"> <li class="albums">${data.data[i].title}</li> </a>`
+    }
+
+}).catch(function(errores) {
+  console.log(errores);  
+})
+
