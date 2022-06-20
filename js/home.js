@@ -20,17 +20,16 @@ fetch(URL).then(function(response){
 }).then(function(data){
     console.log("TRACKS", data.data);
 
-    let info = data.results; 
+    let info = data.data; 
         
         let canciones = document.querySelector('.articleCanciones');
         let elementosLista = ''
 
-    // preguntar por LINEA 17 COMO PONER LA FOTO
-        for(let i=0; i<6; i++){
+        for(let i=0; i<5; i++){
             elementosLista += `<div class="padre">
                                     <a class="" href="./detailsong.html?id=${info[i].id}"> 
-                                        <img src=       ${info[i].album.cover} alt="${info[i].title}"> 
                                         <p class="nombrecancion">${info[i].title}</p>
+                                        <img src= "${info[i].album.cover}" alt="${info[i].title}"> 
                                         <p class="cantante">${info[i].artist.name}</p>
                                     </a>
                                 </div>`    
@@ -43,9 +42,6 @@ fetch(URL).then(function(response){
 
 
 
-
-
-
 let URLAlbum = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/albums"
 
 fetch(URLAlbum)
@@ -54,16 +50,16 @@ fetch(URLAlbum)
     })
     .then(function(data){
         console.log(data.data);
-        let info = data.results;
+        let info = data.data;
         
         let albums = document.querySelector('.articleAlbum');
         let elementosLista = ''
 
         
-        for(let i=0; i<6; i++){
+        for(let i=0; i<5; i++){
             elementosLista += `<div class="padre1">
                                     <a class="peli" href="./detail-album.html?id=${info[i].id}" > 
-                                        <img src=      ${info[i].cover} alt="${info[i].title}">
+                                        <img src=${info[i].cover} alt="${info[i].title}">
                                         <p class="tituloAlbum">${info[i].title}</p>
                                         <p class="albumDe">${info[i].artist.name}</p>
                                     </a>
@@ -79,33 +75,35 @@ fetch(URLAlbum)
     })
 
 
-    fetch(url)
+    
+    
+    
+    let URLCantantes = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
+    
+    
+    fetch(URLCantantes)
     .then(function(response){
         return response.json();
     })
     .then(function(data){
-        console.log(data.results);
-        let info = data.results; 
+        console.log(data.data);
+        let info = data.data; 
         
         let cantantes = document.querySelector('.articleCantantes');
         let elementosLista = ''
 
         
-        for(let i=0; i<6; i++){
+        for(let i=0; i<5; i++){
             elementosLista += `<div class="cantantesPopulares">
-            <a class="peli" href="./detail-movies.html?id=${info[i].id}" > 
-                <img src=https://image.tmdb.org/t/p/w154/${info[i].poster_path} alt="${info[i].title}">
-                <p class="titulopeli">${info[i].title}</p>
-                <p class="fecha">${info[i].release_date}</p>
+            <a href="./detail-artist.html?id=${info[i].id}" class="canciones">
+            <img src="     ${info[i].picture}" alt="${info[i].name}">
+            <p class="nombreCantante">${info[i].name}</p>  <br>
             </a>
-        </div>`
+           </div>`
         }
-        
-
-        
         cantantes.innerHTML = elementosLista;
-
     })
     .catch(function(error){
         console.log(error);
     }) 
+

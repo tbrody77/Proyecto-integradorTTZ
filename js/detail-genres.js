@@ -1,33 +1,49 @@
-let navegador = document.getElementById('navegador');
+let queryString= location.search;
+let qsToObject = new URLSearchParams(queryString);
+let idDetalle = qsToObject.get('id');
 
-let form = document.querySelector('.form');
+let generos = document.querySelector("#generosid");
+let artist = document.querySelector('.contenedorGenero');
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
 
-    if (navegador.value == "" || navegador.value.length <= 3) {
-        alert("Esta vacio el campo de busqueda o debe ser mayor a 3 caracteres");
-    } else {
-        this.submit();
-    }
+let url1 = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${idDetalle}/`;
+fetch(url1)
+    .then(function(response){
+        return response.json()
+    })
+    .then(function(data){
+        console.log(data);
+        document.querySelector(".contenedorGenero").innerHTML += `<h2> Genero: ${data.name}</h2>`;   
+    
+    //artistas
+let url2 = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${idDetalle}/artists`;
+fetch(url2)
+    .then(function(response){
+        return response.json()
+    })
+    .then(function(data){
+        console.log("artista",data.data);
 
-})
 
-let qs = location.search;
-let qsOL = new URLSearchParams(qs)
-let id = qsOL.get("idGenero")
+        for (let i = 0; i < data.data.length; i++) {
+            
+           document.querySelector('.artistas').innerHTML += `<div class="divartistas"> 
+            <img class="imagenartistas" src="${data.data[i].picture}" alt="" height="100px" width="100px"></div>
+            <a class="divartistas" href="./detail-artist.html?id=${data.data[i].id}">${data.data[i].name}</a>
+             `
+            
+        }
+        })
 
-let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${id}`;
 
-fetch(url)
-.then(function(response){
-    return response.json();
-})
-.then(function(data){
-console.log(data)
-document.querySelector(".contenedorGenero").innerHTML +=`<h2 class="generoDetalleG" >Genero: ${data.name}</h2>`
-})
+        //section.style.display = "flex";
+        //section.style.flexDirection = "row";
+    
 
-.catch(function(error){
-    console.log(error);
-})
+         
+        
+    })
+    .catch(function(error){
+        console.log(error);
+    })
+ 
