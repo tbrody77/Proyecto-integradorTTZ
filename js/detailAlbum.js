@@ -37,9 +37,9 @@ fetch (url1)
         let temasAlbum = document.querySelector ('.temasAlbum');
         let temas = document.querySelector ('.temas')
 
-        title.innerText = data.title;
-        nombreArtista.innerText = data.artist.name
-        nombreGenero.innerText = data.genres.data[0].name
+        title.innerHTML = `<a href="./detail-album.html?id=${data.id}">${data.title}</a>`;
+        nombreArtista.innerHTML = `<a href="./detail-artist.html?id=${data.id}">${data.artist.name}</a>`
+        nombreGenero.innerHTML = `<a href="./detail-genres.html?id=${data.genres.data[0].name.id}">${data.genres.data[0].name}</a>`
         fechaDeEstreno.innerText = data.release_date
         imgAlbum.src = data.cover_medium    
         
@@ -96,7 +96,8 @@ fetch(urlAlbumCancion)
 
     for (let i = 0; i < data.data.length; i++) {
         let listaAlbum = document.querySelector('.temasAlbum')
-        listaAlbum.innerHTML   += `<li>${data.data[i].title}</li>`
+
+        listaAlbum.innerHTML += `<a href="./detailsong.html?id=${data.data[i].id}"><li>${data.data[i].title}</li></a>`
     }
     
     
@@ -105,5 +106,3 @@ fetch(urlAlbumCancion)
 }).catch(function(errores) {
   console.log(errores);  
 })
-
-

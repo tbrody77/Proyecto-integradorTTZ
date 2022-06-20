@@ -47,7 +47,7 @@ fetch (url1)
         disco.innerText = data.album.title;
         artista.innerText = data.artist.name;
         
-       // imgAlbum.src = data.album.cover;
+       imgAlbum.src = data.album.cover;
 
         
         //temasAlbum.innerText = data.tracks

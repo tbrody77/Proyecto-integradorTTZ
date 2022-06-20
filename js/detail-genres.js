@@ -1,28 +1,29 @@
-let queryString= location.search;
-let qsToObject = new URLSearchParams(queryString);
-let idDetalle = qsToObject.get('id');
+let qs = location.search;
+let qtso = new URLSearchParams(qs);
+let id = qtso.get("idGenero");
+console.log(id);
 
 let generos = document.querySelector("#generosid");
 let artist = document.querySelector('.contenedorGenero');
 
 
-let url1 = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${idDetalle}/`;
+let url1 = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${id}`;
 fetch(url1)
     .then(function(response){
         return response.json()
     })
     .then(function(data){
-        console.log(data);
-        document.querySelector(".contenedorGenero").innerHTML += `<h2> Genero: ${data.name}</h2>`;   
+        console.log(data.name);
+        document.querySelector(".contenedorGenero").innerHTML += `<h1 id="generosid"> Genero: ${data.name}</h1>`;   
     
     //artistas
-let url2 = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${idDetalle}/artists`;
+let url2 = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${id}/artists`;
 fetch(url2)
     .then(function(response){
         return response.json()
     })
     .then(function(data){
-        console.log("artista",data.data);
+        console.log(data.data);
 
         for (let i = 0; i < data.data.length; i++) {
             
@@ -42,4 +43,3 @@ fetch(url2)
     .catch(function(error){
         console.log(error);
     })
-
