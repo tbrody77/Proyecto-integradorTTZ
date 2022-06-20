@@ -1,68 +1,59 @@
-let qs = location.search;
-let qsObjLiteral = new URLSearchParams(qs);
-let idPersonaje = qsObjLiteral.get('id');
+let navegador = document.getElementById('navegador');
 
-/*Buscar el personaje*/
+/*
+let form = document.querySelector('.form');
 
-const URL = `https://developers.deezer.com/api/chart`;
-
-fetch(URL).then(function(response){
-    return response.json();
-}).then(function(data){
-    console.log(data);
-
-    /* Capturo elemento del DOM */
-    let etiquetaNombre = document.querySelector('.nombre')
-    let etiquetaStatus = document.querySelector('.status')
-    let etiquetaEspecie = document.querySelector('.especie')
-    let etiquetaImg = document.querySelector('img')
-
-    /* Darle los valores a los elementos */
-    etiquetaNombre.innerText = `Nombre: ${data.name}`
-    etiquetaStatus.innerText = `Status: ${data.status}`
-    etiquetaEspecie.innerText = `Especie: ${data.especie}`
-    etiquetaImg.src = data.image;
-
-}).catch(function(error) {
-    console.log(error);
-});
-
-/* es logica */
-
-let favoritos = [];
-
-/* Recuperar del storage la info */
-
-let recuperoStorage = localStorage.getItem('favoritos')
-
-if(recuperoStorage != null){
-    /* Si recupero el storage y me trae algo quiero convertirlo en un tipo de datos de JS */
-    favoritos = JSON.parse(recuperoStorage);
-};
-
-let fav = document.querySelector('.fav')
-
-if (favoritos.includes(idPersonaje)){
-    fav.innerText = 'Quitar de favoritos';
-}
-
-fav.addEventListener('click', function(e) {
+form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    if (favoritos.includes(idPersonaje)) {
-        /* Eliminar un elemento del array */
-
-        let indice = favoritos.indexOf(idPersonaje);
-        favoritos.splice(indice,1);
-        fav.innerText = 'Agregar a favoritos';
+    if (navegador.value == "" || navegador.value.length <= 3) {
+        alert("Esta vacio el campo de busqueda o debe ser mayor a 3 caracteres");
     } else {
-        favoritos.push(idPersonaje)
-        fav.innerText = 'Quitar de favoritos';
+        this.submit();
     }
-    /* Subir info al local storage */
-
-    let favToString = JSON.stringify(favoritos) /* Lo tengo en JSON y JS lo puede modificar */
-    localStorage.setItem('favoritos', favToString)
-
-
+    
 })
+*/
+
+const url = 'https://api.allorigins.win/raw?url=https://developers.deezer.com/api/chart ';
+
+let fav_arr = JSON.parse(localStorage.getItem('favs'));
+//let favoritos = JSON.parse(recuperoStorage);
+
+/* capturar el elemento en el dom */;
+
+let section = document.querySelector('.songArticles');
+
+let personajesFavoritos = '';
+
+/* Evaluar el localStorage */
+
+if (fav_arr == null || fav_arr.length == 0) {
+    section.innerHTML = '<p>No hay items en Favoritos</p>';
+} else {
+    /* Si contiene elementos */
+
+    for (let i = 0; i < fav_arr.length; i++) {
+        /* Buscar el personaje */
+        let id = fav_arr[i];
+        const URL = 'https://api.allorigins.win/raw?url=https://api.deezer.com/track/' + id;
+
+        fetch(URL)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data){
+                personajesFavoritos += `<a href="/detailsong.html?id=${id}">
+                                            <article>
+                                                <img src=${data.album.cover}>
+                                                <p>Nombre: ${data.title}</p>
+                                                
+                                                </article> 
+                                                <hr></a>` 
+                                                
+                section.innerHTML = personajesFavoritos;
+            }).catch(function (error) {
+                console.log(error);
+            })
+    }
+}
