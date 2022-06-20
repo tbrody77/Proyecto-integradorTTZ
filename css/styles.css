@@ -318,7 +318,7 @@ a{
     font-size: 17px;
 }
 .temasAlbum{
-    color:indianred;
+    color: #f7b439;
     font-size: 20px;
 }
 .tituloAlbum{
@@ -381,6 +381,10 @@ img{
 }
 .tituloAlbum{
     font-size: 15px;
+}
+.imgAlbum{
+    width: 250px;
+    height: 250px;
 }
 
 
