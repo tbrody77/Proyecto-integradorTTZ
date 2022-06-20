@@ -57,21 +57,45 @@ if (fav_arr == null || fav_arr.length == 0) {
             })
     }
 }
+let albumFav = JSON.parse(localStorage.getItem('albumFav'));
+console.log(albumFav);
+//let favoritos = JSON.parse(recuperoStorage);
 
-fav.addEventListener ('click', function (e) {
-    e.preventDefault();
+/* capturar el elemento en el dom */;
 
-    if (albumFav.includes(id)) { 
-        let indice = albumFav.indexOf(id);
-        albumFav.splice(indice, 1);
-        botonFav.innerText = 'Agregar a favoritos'
-    } 
-    else {
-    albumFav.push(id);
-        botonFav.innerHTML = 'Quitar de Favoritos';
+let section2 = document.querySelector('.albumArticles');
+
+let personajesFavoritos2 = '';
+
+/* Evaluar el localStorage */
+
+if (albumFav == null || albumFav.length == 0) {
+    section.innerHTML = '<p>No hay items en Favoritos</p>';
+} else {
+    /* Si contiene elementos */
+
+    for (let i = 0; i < albumFav.length; i++) {
+        /* Buscar el personaje */
+        let id2 = albumFav[i];
+        const URL2 = 'https://api.allorigins.win/raw?url=https://api.deezer.com/album/' + id2;
+
+        fetch(URL2)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data){
+                personajesFavoritos2 += `<a href="/detail-album.html?id=${id2}">
+                                            <article>
+                                                <img src=${data.cover_medium}>
+                                                <p>Nombre: ${data.title}</p>
+                                                
+                                                </article> 
+                                                <hr></a>` 
+                                                
+                section2.innerHTML = personajesFavoritos2;
+            }).catch(function (error) {
+                console.log(error);
+            })
     }
-    console.log(albumFav);
-    
-    let favsAStirng = JSON.stringify(albumFav);
-    localStorage.setItem('albumFav', favsAStirng) 
-}) 
+}
+
