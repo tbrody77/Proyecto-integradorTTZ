@@ -27,9 +27,10 @@ fetch(url2)
 
         for (let i = 0; i < data.data.length; i++) {
             
-           document.querySelector('.artistas').innerHTML += `<div class="divartistas"> 
+           document.querySelector('.artistas').innerHTML += `<div class="divartistas">
+           <a class="divartistas" href="./detail-artist.html?id=${data.data[i].id}"> 
             <img class="imagenartistas" src="${data.data[i].picture}" alt="" height="100px" width="100px"></div>
-            <a class="divartistas" href="./detail-artist.html?id=${data.data[i].id}">${data.data[i].name}</a>
+            ${data.data[i].name}</a>
              `
             
         }
