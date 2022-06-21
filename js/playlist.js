@@ -1,6 +1,6 @@
 let navegador = document.getElementById('navegador');
 
-/*
+
 let form = document.querySelector('.form');
 
 form.addEventListener('submit', function(e) {
@@ -12,7 +12,7 @@ form.addEventListener('submit', function(e) {
         this.submit();
     }
 
-})*/
+})
 
 let qs = location.search; 
 let qtso = new URLSearchParams(qs); 
