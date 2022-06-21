@@ -29,7 +29,7 @@ let personajesFavoritos = '';
 /* Evaluar el localStorage */
 
 if (fav_arr == null || fav_arr.length == 0) {
-    section.innerHTML = '<p>No hay items en Favoritos</p>';
+    section.innerHTML = '<p>No hay canciones en Favoritos</p>';
 } else {
     /* Si contiene elementos */
 
@@ -43,7 +43,7 @@ if (fav_arr == null || fav_arr.length == 0) {
                 return response.json();
             })
             .then(function(data){
-                personajesFavoritos += `<a href="/detailsong.html?id=${id}">
+                personajesFavoritos += `<a href="./detailsong.html?id=${id}">
                                             <article>
                                                 <img src=${data.album.cover}>
                                                 <p>Nombre: ${data.title}</p>
@@ -70,7 +70,7 @@ let personajesFavoritos2 = '';
 /* Evaluar el localStorage */
 
 if (albumFav == null || albumFav.length == 0) {
-    section.innerHTML = '<p>No hay items en Favoritos</p>';
+    section2.innerHTML = '<p>No hay albums en Favoritos</p>';
 } else {
     /* Si contiene elementos */
 
@@ -84,7 +84,7 @@ if (albumFav == null || albumFav.length == 0) {
                 return response.json();
             })
             .then(function(data){
-                personajesFavoritos2 += `<a href="/detail-album.html?id=${id2}">
+                personajesFavoritos2 += `<a href="./detail-album.html?id=${data.id}">
                                             <article>
                                                 <img src=${data.cover_medium}>
                                                 <p>Nombre: ${data.title}</p>

@@ -42,10 +42,10 @@ fetch (url1)
         let artista = document.querySelector('.nombreArtista');
         let disco = document.querySelector('.tituloDisco');
         
-        title.innerText = data.title;
+        
         songName = data.title;
-        disco.innerText = data.album.title;
-        artista.innerText = data.artist.name;
+        disco.innerHTML = `<a href="./detail-album.html?id=${data.album.id}">${data.album.title}</a>`;
+        artista.innerHTML = `<a href="./detail-artist.html?id=${data.artist.id}">${data.artist.name}</a>`
         
        imgAlbum.src = data.album.cover;
 
