@@ -39,12 +39,12 @@ fetch (url1)
 
         title.innerHTML = `<a href="./detail-album.html?id=${data.id}">${data.title}</a>`;
         nombreArtista.innerHTML = `<a href="./detail-artist.html?id=${data.id}">${data.artist.name}</a>`
-        // nombreGenero.innerHTML = `<a href="./detail-genres.html?id=${data.genres.id}">${data.genres.data[0].name}</a>`
+        nombreGenero.innerHTML = `<a href="./detail-genres.html?idGenero=${data.genres.data[0].id}">${data.genres.data[0].name}</a>`
         fechaDeEstreno.innerText = data.release_date
         imgAlbum.src = data.cover_medium    
         
 
-        nombreGenero.innerHTML = `<a href="./genres.html">${data.genres.data[0].name}</a>`
+        //nombreGenero.innerHTML = `<a href="./genres.html">${data.genres.data[0].name}</a>`
         
 
 
