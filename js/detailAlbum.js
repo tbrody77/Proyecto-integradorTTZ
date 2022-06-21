@@ -38,7 +38,7 @@ fetch (url1)
         let temas = document.querySelector ('.temas')
 
         title.innerHTML = `<a href="./detail-album.html?id=${data.id}">${data.title}</a>`;
-        nombreArtista.innerHTML = `<a href="./detail-artist.html?id=${data.id}">${data.artist.name}</a>`
+        nombreArtista.innerHTML = `<a href="./detail-artist.html?id=${data.artist.id}">${data.artist.name}</a>`
         nombreGenero.innerHTML = `<a href="./detail-genres.html?idGenero=${data.genres.data[0].id}">${data.genres.data[0].name}</a>`
         fechaDeEstreno.innerText = data.release_date
         imgAlbum.src = data.cover_medium    
