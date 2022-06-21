@@ -53,7 +53,7 @@ fetch(urlCanciones)
     console.log(data);
 
     let detalle = document.querySelector('.detalles');
-    for (let i = 0; i <6; i++) {
+    for (let i = 0; i <5; i++) {
     detalle.innerHTML +=`<a href="./detail-album.html?id=${data.data[i].id}"> <li class="albums">${data.data[i].title}</li> </a>`
     }
 
