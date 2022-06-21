@@ -11,73 +11,90 @@ form.addEventListener('submit', function(e) {
     } else {
         this.submit();
     }
-
+    
 })
 
-let qs = location.search; 
-let qtso = new URLSearchParams(qs); 
-let id = qtso.get('id');
-let url1 = 'https://api.allorigins.win/raw?url=https://api.deezer.com/track/' + id;
-let playerURL = "https://widget.deezer.com/widget/dark/track/" + id;
-let player = document.querySelector('.player');
-player.src = playerURL;
+
+
 
 let fav_arr = JSON.parse(localStorage.getItem('favs'));
-let botonFav = document.querySelector('.botonFav');
-if (fav_arr != null && fav_arr.includes(id)) {
-    botonFav.innerText = 'Quitar de favoritos';
+//let favoritos = JSON.parse(recuperoStorage);
+
+/* capturar el elemento en el dom */;
+
+let section = document.querySelector('.songArticles');
+
+let personajesFavoritos = '';
+
+/* Evaluar el localStorage */
+
+if (fav_arr == null || fav_arr.length == 0) {
+    section.innerHTML = '<p>No hay items en Favoritos</p>';
+} else {
+    /* Si contiene elementos */
+
+    for (let i = 0; i < fav_arr.length; i++) {
+        /* Buscar el personaje */
+        let id = fav_arr[i];
+        const URL = 'https://api.allorigins.win/raw?url=https://api.deezer.com/track/' + id;
+
+        fetch(URL)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data){
+                personajesFavoritos += `<a href="/detailsong.html?id=${id}">
+                                            <article>
+                                                <img src=${data.album.cover}>
+                                                <p>Nombre: ${data.title}</p>
+                                                
+                                                </article> 
+                                                <hr></a>` 
+                                                
+                section.innerHTML = personajesFavoritos;
+            }).catch(function (error) {
+                console.log(error);
+            })
+    }
 }
+let albumFav = JSON.parse(localStorage.getItem('albumFav'));
+console.log(albumFav);
+//let favoritos = JSON.parse(recuperoStorage);
 
-let songName;
-fetch (url1)
-    .then (function (response) {
-        console.log(response);
-        return response.json()
-    })
-    .then (function (data) {
-        console.log(data);
+/* capturar el elemento en el dom */;
 
-        let title = document.querySelector('.tituloCancion');
-        let imgAlbum = document.querySelector ('.imgAlbum');
-        let artista = document.querySelector('.nombreArtista');
-        let disco = document.querySelector('.tituloDisco');
-        
-        title.innerText = data.title;
-        songName = data.title;
-        disco.innerText = data.album.title;
-        artista.innerText = data.artist.name;
-        
-       imgAlbum.src = data.album.cover;
+let section2 = document.querySelector('.albumArticles');
 
-        
-        //temasAlbum.innerText = data.tracks
-        //imgAlbum.innerText = data.picture_medium;
+let personajesFavoritos2 = '';
 
-        imgAlbum.innerText = data.cover
- })
-    .catch(function(error){
-        console.log(error);
-    })
+/* Evaluar el localStorage */
 
+if (albumFav == null || albumFav.length == 0) {
+    section.innerHTML = '<p>No hay items en Favoritos</p>';
+} else {
+    /* Si contiene elementos */
 
-function addToPlaylist(){
-    if (fav_arr == null) {
-        alert('Se agrego ' + songName + ' a la playlist');
-        let newArr = [];
-        newArr.push(id);
-        localStorage.setItem('favs', JSON.stringify(newArr));
-        botonFav.innerText = 'Quitar de favoritos';
-    }
-    else if (!fav_arr.includes(id)) {
-        alert('Se agrego ' + songName + ' a la playlist');
-        fav_arr.push(id);
-        localStorage.setItem('favs', JSON.stringify(fav_arr));
-        botonFav.innerText = 'Quitar de favoritos';
-    }
-    else {
-        alert('Se quito ' + songName + ' de la playlist');
-        fav_arr = fav_arr.filter(item => item !== id)
-        localStorage.setItem('favs', JSON.stringify(fav_arr));
-        botonFav.innerText = 'Añadir a playlist';
+    for (let i = 0; i < albumFav.length; i++) {
+        /* Buscar el personaje */
+        let id2 = albumFav[i];
+        const URL2 = 'https://api.allorigins.win/raw?url=https://api.deezer.com/album/' + id2;
+
+        fetch(URL2)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data){
+                personajesFavoritos2 += `<a href="/detail-album.html?id=${id2}">
+                                            <article>
+                                                <img src=${data.cover_medium}>
+                                                <p>Nombre: ${data.title}</p>
+                                                
+                                                </article> 
+                                                <hr></a>` 
+                                                
+                section2.innerHTML = personajesFavoritos2;
+            }).catch(function (error) {
+                console.log(error);
+            })
     }
 }
