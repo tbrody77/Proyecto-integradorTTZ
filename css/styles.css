@@ -386,8 +386,18 @@ img{
     width: 250px;
     height: 250px;
 }
-
-
+#busqueda{
+    color: wheat;
+}
+.articleS{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.divS{
+    padding: 10px;
+}
 
 
 
