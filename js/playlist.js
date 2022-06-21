@@ -84,7 +84,7 @@ if (albumFav == null || albumFav.length == 0) {
                 return response.json();
             })
             .then(function(data){
-                personajesFavoritos2 += `<a href="/detail-album.html?id=${id2}">
+                personajesFavoritos2 += `<a href="./detail-album.html?id=${data.id}">
                                             <article>
                                                 <img src=${data.cover_medium}>
                                                 <p>Nombre: ${data.title}</p>
