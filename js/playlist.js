@@ -98,4 +98,3 @@ if (albumFav == null || albumFav.length == 0) {
             })
     }
 }
-

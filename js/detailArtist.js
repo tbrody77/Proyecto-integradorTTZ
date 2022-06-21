@@ -41,38 +41,6 @@ fetch (url1)
 
 
 
-let albumFav = []
-let recuperoStorage = localStorage.getItem ('albumFav');
-
-if (recuperoStorage != null) {
-    albumFav = JSON.parse(recuperoStorage);
-}
-
-let fav = document.querySelector ('.favoritos');
-let botonFav = document.querySelector ('.botonFav')
-
-if (albumFav.includes(id)) {
-    botonFav.innerText = 'Quitar de favoritos'
-} 
-
-fav.addEventListener ('click', function (e) {
-    e.preventDefault();
-
-    if (albumFav.includes(id)) { 
-        let indice = albumFav.indexOf(id);
-        albumFav.splice(indice, 1);
-        botonFav.innerText = 'Agregar a favoritos'
-    } 
-    else {
-    albumFav.push(id);
-        botonFav.innerHTML = 'Quitar de Favoritos';
-    }
-    console.log(albumFav);
-    
-    let favsAStirng = JSON.stringify(albumFav);
-    localStorage.setItem('albumFav', favsAStirng) 
-}) 
-
 
 const urlCanciones = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}/albums`
 
@@ -85,7 +53,7 @@ fetch(urlCanciones)
     console.log(data);
 
     let detalle = document.querySelector('.detalles');
-    for (let i = 0; i <6; i++) {
+    for (let i = 0; i <5; i++) {
     detalle.innerHTML +=`<a href="./detail-album.html?id=${data.data[i].id}"> <li class="albums">${data.data[i].title}</li> </a>`
     }
 

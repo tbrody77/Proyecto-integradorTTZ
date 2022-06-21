@@ -13,35 +13,37 @@ form.addEventListener('submit', function(e) {
 
 })
 
-let objeto = new URLSearchParams (location.search);
-let search = objeto.get("search");
+let qs = location.search;
+let qsto = new URLSearchParams (qs);
+let searchRes = qsto.get("search");
 
-fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/search?q=${search}`)
+fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/search?q=${searchRes}`)
 
-.then( function(respuesta){
-    return respuesta.json()
+.then( function(response){
+    return response.json()
 })
 .then( function(busqueda){
     console.log(busqueda.data);
-    
-    let resultados = busqueda.data;
-    let resultadosB = document.querySelector(".articulo1");
-    let encabezado = document.querySelector("#busqueda");
 
-    
-    
-    encabezado.innerText += `${search}`
-    for(let i = 0; i < 12; i++){
+   let resultados = busqueda.data;
+   let resultadosB = document.querySelector(".articleS");
+   let encabezado = document.querySelector("#busqueda")
 
-
+    if (searchRes == null && searchRes != resultados) {
+        encabezado.innerHTML = '<p>No hay coincidencias</p>';
+    } else{
+        encabezado.innerText += ` ${searchRes}`
+        for(let i = 0; i < busqueda.data.length; i++){
             resultadosB.innerHTML += `
-            <div class="div1"> 
-        <a href="./detailsong.html?id=${busqueda.data[i].id}" class="sinDelineado"?id=${busqueda.data[i].id}"><img  class="foto" src=${busqueda.data[i].album.cover}></a>
-        <a class="ahome" href="./detailsong.html?id=${busqueda.data[i].id}" class="sinDelineado""><h4  class="albums2322" >${busqueda.data[i].title}</h4></a> 
-        </div>
+            <div class="divS"> 
+            <a href="./detailsong.html?id=${busqueda.data[i].id}" class="aSearch"?id=${busqueda.data[i].id}"><img  class="imgS" src=${busqueda.data[i].album.cover}></a>
+             <a class="ahome" href="./detailsong.html?id=${busqueda.data[i].id}" class="aSearch""><h4  class="h4Search" >${busqueda.data[i].title}</h4></a> 
+            </div>
             `
 
-    }
+    }}
+
+
 }).catch(function (error) {
     console.error(error)
 })

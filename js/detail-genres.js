@@ -1,10 +1,25 @@
+let navegador = document.getElementById('navegador');
+
+
+let form = document.querySelector('.form');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    if (navegador.value == "" || navegador.value.length <= 3) {
+        alert("Esta vacio el campo de busqueda o debe ser mayor a 3 caracteres");
+    } else {
+        this.submit();
+    }
+    
+})
+
 let qs = location.search;
 let qtso = new URLSearchParams(qs);
 let id = qtso.get("idGenero");
 console.log(id);
 
-let generos = document.querySelector("#generosid");
-let artist = document.querySelector('.contenedorGenero');
+
 
 
 let url1 = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${id}`;
