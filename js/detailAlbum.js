@@ -44,7 +44,7 @@ fetch (url1)
         imgAlbum.src = data.cover_medium    
         
 
-        nombreGenero.innerHTML = `<a href="./detail-genres.html?idGenero=${data.id}">${data.genres.data[0].name}</a>`
+        nombreGenero.innerHTML = `<a href="./genres.html">${data.genres.data[0].name}</a>`
         
 
 
