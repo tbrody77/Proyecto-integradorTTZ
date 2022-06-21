@@ -1,3 +1,5 @@
+window.addEventListener ('load',function () {
+
 let navegador = document.getElementById('navegador');
 
 let form = document.querySelector('.form');
@@ -5,6 +7,7 @@ let form = document.querySelector('.form');
 form.addEventListener('submit', function(e) {
     e.preventDefault();
 
+    let divS = document.querySelector('.divS')
     if (navegador.value == "" || navegador.value.length <= 3) {
         alert("Esta vacio el campo de busqueda o debe ser mayor a 3 caracteres");
     } else {
@@ -46,4 +49,6 @@ fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/search?q=${sear
 
 }).catch(function (error) {
     console.error(error)
+})
+
 })
